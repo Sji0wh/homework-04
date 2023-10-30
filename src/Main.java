@@ -1,17 +1,29 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        //Task 1
+        Car firstCar = new Car();
+        firstCar.Brand = "Nissan";
+        firstCar.Model = "Qashqai j11";
+        firstCar.Year = 2018;
+        System.out.println(firstCar.Brand);
+        System.out.println(firstCar.Model);
+        System.out.println(firstCar.Year);
+        firstCar.startEngine();
+        firstCar.stopEngine();
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        //Task 2
+        Calculator calc = new Calculator();
+        int calcSum = calc.Addition(5,8);
+        System.out.println("Calculation sum = " + calcSum);
+        boolean comparison = calc.isGreater(46,42);
+        System.out.println("First number is greater = " + comparison);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        //Task 3
+        NumberManipulator manipulator = new NumberManipulator();
+        int inNum = 45;
+        int numberIncrease = manipulator.number;
+        System.out.println("Initial number: " + inNum);
+        System.out.println("Number after increment: " + manipulator.incrementByOne(inNum));
+        System.out.println("Number after decrement: " + manipulator.decrementByOne(inNum));
     }
 }
